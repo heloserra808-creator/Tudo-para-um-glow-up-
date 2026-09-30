@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6c9dc">
+<link rel="manifest" href="manifest.json">
+<title>Glow Up Diva ✨</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#fff7fb;color:#5a3b4d}
+header{padding:28px 20px 20px;background:linear-gradient(135deg,#ffd9e8,#f7c4dc);border-radius:0 0 28px 28px}
+h1{margin:0;font-size:30px} .sub{margin-top:7px}
+nav{display:flex;gap:8px;padding:12px;position:sticky;top:0;background:#fff7fb;z-index:2;overflow:auto}
+nav button,.btn{border:0;border-radius:20px;padding:10px 14px;background:#fff;border:1px solid #f0c5d8;color:#75445d;font-weight:700}
+main{padding:8px 16px 30px}.card{background:white;border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 5px 18px #d8a9bb35}
+.card h2{margin-top:0;font-size:20px}.tip{padding:12px;background:#fff0f6;border-radius:14px;margin:8px 0}
+.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0}.check input{accent-color:#d979a4;width:20px;height:20px}
+.small{font-size:13px;color:#866575}.pink{color:#c35f8c;font-weight:800}
+</style>
+</head>
+<body>
+<header><h1>✨ Glow Up Diva</h1><div class="sub">Seu cantinho de autocuidado, beleza e organização 💗</div></header>
+<nav>
+<button onclick="show('hoje')">Hoje</button><button onclick="show('skin')">Skin care</button>
+<button onclick="show('beleza')">Beleza</button><button onclick="show('diva')">Diva</button>
+</nav>
+<main id="app"></main>
+<script>
+const data={
+hoje:`<div class="card"><h2>🌸 Checklist de hoje</h2>
+<label class="check"><input type="checkbox"> Beber água ao longo do dia</label>
+<label class="check"><input type="checkbox"> Lavar o rosto suavemente</label>
+<label class="check"><input type="checkbox"> Usar hidratante adequado para sua pele</label>
+<label class="check"><input type="checkbox"> Usar protetor solar durante o dia</label>
+<label class="check"><input type="checkbox"> Pentear/cuidar do cabelo com delicadeza</label>
+<label class="check"><input type="checkbox"> Organizar um cantinho do quarto</label>
+<label class="check"><input type="checkbox"> Fazer algo que te deixe feliz</label>
+<p class="small">Glow up também é cuidar de você, descansar e se sentir bem. Não precisa mudar seu corpo para ser uma diva. 💕</p></div>
+<div class="card"><h2>💎 Dica do dia</h2><div class="tip">Escolha uma roupa que você goste, deixe seu material organizado e faça sua rotina com calma.</div></div>`,
+skin:`<div class="card"><h2>🫧 Skin care simples</h2>
+<div class="tip"><b>Manhã:</b> limpeza suave → hidratante → protetor solar.</div>
+<div class="tip"><b>Noite:</b> limpeza suave → hidratante.</div>
+<p class="small">Se algum produto arder, irritar ou causar reação, pare de usar e conte a um adulto responsável. Para acne ou problemas persistentes, um dermatologista pode orientar.</p></div>
+<div class="card"><h2>🌷 Hábitos fofos</h2><ul><li>Não espremer espinhas.</li><li>Trocar a fronha regularmente.</li><li>Lavar as mãos antes de tocar o rosto.</li><li>Não compartilhar maquiagem ou produtos que encostam na pele.</li></ul></div>`,
+beleza:`<div class="card"><h2>🎀 Beleza & autocuidado</h2>
+<div class="tip">💇‍♀️ Cabelo: desembarace começando pelas pontas e evite puxar.</div>
+<div class="tip">💅 Unhas: mantenha-as limpas e não retire a cutícula de forma agressiva.</div>
+<div class="tip">🧴 Corpo: banho, higiene e hidratante quando sua pele precisar.</div>
+<div class="tip">🧼 Maquiagem: use produtos apropriados para sua idade e retire antes de dormir.</div>
+</div>
+<div class="card"><h2>✨ Mini missão</h2><p>Monte um look com uma peça que você ama e um acessório que combine. Estilo é uma forma de expressão!</p></div>`,
+diva:`<div class="card"><h2>👑 Modo Patricinha Diva</h2>
+<div class="tip">🎀 <b>Organização:</b> deixe bolsa, mochila e quarto arrumadinhos.</div>
+<div class="tip">💗 <b>Gentileza:</b> trate as pessoas com respeito e tenha personalidade própria.</div>
+<div class="tip">📚 <b>Confiança:</b> cuide dos estudos e comemore suas pequenas conquistas.</div>
+<div class="tip">🌸 <b>Estilo:</b> escolha cores, acessórios e penteados que você realmente goste.</div>
+<div class="tip">🫶 <b>Autocuidado:</b> dormir bem, descansar e se divertir também fazem parte do glow up.</div>
+<p class="small">Ser uma “patricinha diva” aqui significa ter estilo, organização, gentileza e confiança — não seguir um padrão de aparência.</p></div>`
+};
+function show(k){document.getElementById('app').innerHTML=data[k];}
+show('hoje');
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+</body></html>

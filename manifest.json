@@ -1,0 +1,10 @@
+{
+  "name": "Glow Up Diva",
+  "short_name": "Glow Diva",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff7fb",
+  "theme_color": "#f6c9dc",
+  "lang": "pt-BR",
+  "icons": []
+}
